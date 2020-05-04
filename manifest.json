@@ -1,9 +1,10 @@
 {
   "manifest_version": 2,
-  "name": "ビタミンMeeeeet",
-  "version": "1.0",
+  "name": "Google Meet Camera Injection",
+  "short_name": "Meet Camera",
+  "version": "0.0.1",
 
-  "description": "Google Meetでカメラ替わりに動画ファイルを流したり、マイクに重ねて音源ファイルを再生したりできます。",
+  "description": "Google Meet のカメラ映像に干渉します.",
   "icons":  {
     "16": "icon16.png",
     "48": "icon48.png"
@@ -12,6 +13,7 @@
     {
       "matches": ["https://meet.google.com/*"],
       "js": ["loader.js"],
+      "css": ["css/matter.min.css", "css/style.css"],
       "run_at": "document_end"
     }
   ],
@@ -20,6 +22,8 @@
 
   ],
   "web_accessible_resources": [
-    "cs.js"
+    "cs.js",
+    "script/tfjs@1.2.js",
+    "script/body-pix@2.0.js"
   ]
 }
